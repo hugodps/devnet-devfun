@@ -28,9 +28,9 @@ import random
 
 
 DIVEFINDS = [
-    "engagement rings 💍 and other rings ",
-    "completely ruined mobile phones 📱",
-    "⌚ Apple, Rolex, and Timex watches",
+    "engagement rings  and other rings ",
+    "completely ruined mobile phones ",
+    " Apple, Rolex, and Timex watches",
 ]
 
 
@@ -50,13 +50,16 @@ def calculate_number_items(number_dives):
 def create_dive_finds(number_dives):
     """Make and return the items the scuba diver finds in this dive.
 
-    The message should include the diver's find and amounts.
+    The message should include the diver's finds and amounts.
     """
     # TODO: Create a message telling a scuba diver what they found by 
     # calling generate_find() and calculate_number_items() and 
     # then composing and returning the message and numbers.
+    finds = generate_find()
+    number_items = calculate_number_items(number_dives)
 
-    raise NotImplementedError()
+    return "In {} dives, you found {} {}".format(number_dives, number_items, finds)
+    #raise NotImplementedError()
 
 
 def main():
